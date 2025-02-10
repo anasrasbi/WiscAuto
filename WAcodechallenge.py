@@ -105,6 +105,9 @@ for point in left_points + right_points:
 # Draw converging lines
 drawn_img = draw_converging_lines(image, left_points, right_points)
 
+# Save the output as "answer.png"
+cv2.imwrite("answer.png", cv2.cvtColor(drawn_img, cv2.COLOR_RGB2BGR))
+
 # Display the result
 plt.imshow(drawn_img)
 plt.axis("off")
